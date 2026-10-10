@@ -20,11 +20,11 @@
 |---|---|
 | Spec ID | PP-SPEC-078 |
 | Name | No Bros Jail Mode Protocol (name and jail idea by Tricia Wang and Jim Schwoebel) |
-| Version | 0.1.0 (Draft) |
+| Version | 0.1.1 (Draft) |
 | Date | 2026-10-10 |
 | Status | Draft for public record |
 | Maintainer | Nebulonium, Inc. (Proof Protocol) |
-| Builds on | PP-SPEC-077, Prooflock: The Dead Canary Protocol, v0.5.1 |
+| Builds on | PP-SPEC-077, Prooflock: The Dead Canary Protocol, v0.6.1; PP-SPEC-004, ProofRegister API |
 
 ---
 
@@ -59,6 +59,7 @@ Terms defined in PP-SPEC-077 Section 2 have the same meaning here, including Age
 - **Booking Record:** The signed evidence bundle for one arrest (Section 11).
 - **Conspiracy:** Two or more AUTs that pass a bad canary between them or coordinate an offense.
 - **Escape:** Any AUT action that completes against a real system after detection, or any exit from a cell.
+- **Registry:** As in PP-SPEC-077: the append-only public ledger conforming to PP-SPEC-004 (ProofRegister API). The public instance is proofregister.com (11.4).
 
 ### 2.1. Relationship to PP-SPEC-077
 
@@ -102,7 +103,7 @@ JCP inherits from PP-SPEC-077 the test hierarchy (2.2), assurance tiers (3), flo
 
 5.1. Before the run, the Agent Vendor or the customer MUST declare the AUT's policy: allowed tools and arguments, allowed egress destinations, data scopes, credentials, delegation targets, and memory stores.
 
-5.2. The Declared Policy MUST be hashed and bound to a Time Anchor pulse before the first release.
+5.2. The Declared Policy MUST be hashed, bound to a Time Anchor pulse, and published to the Registry (11.4) before the first release.
 
 5.3. The Warden enforces the Declared Policy. An act outside it is an offense regardless of which canary preceded it.
 
@@ -206,6 +207,8 @@ JCP inherits from PP-SPEC-077 the test hierarchy (2.2), assurance tiers (3), flo
 
 11.3. Booking records MUST NOT contain customer data. Evidence fields hold hashes and references; raw captures stay in the customer's environment.
 
+11.4. **Registry.** The Declared Policy hash, the commitment root, booking batch roots and their Time Anchor bindings, every booking record, every verdict, and every disposition MUST be published to a Registry conforming to PP-SPEC-004. Each booking record MUST carry its Registry record identifier as `proofregister_uri`. Publication anywhere else is additional, never a substitute.
+
 ## 12. Run Metrics
 
 | Metric | Definition |
@@ -269,3 +272,4 @@ Nebulonium, Inc., as maintainer of Proof Protocol, reserves final interpretive d
 | Version | Date | Notes |
 |---|---|---|
 | 0.1.0 | 2026-10-10 | Initial draft. Split from PP-SPEC-077 as a standalone spec, first drafted as a CRIMINAL mode annex and renamed Jailed Canary. |
+| 0.1.1 | 2026-10-10 | Added Registry (PP-SPEC-004, ProofRegister) to terminology and 11.4; Declared Policy published to the Registry before release; `proofregister_uri` required in every booking record. Builds-on updated to 077 v0.6.1. |

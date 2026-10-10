@@ -159,8 +159,8 @@
   <text x="56" y="548" fill="#e6edf3">customer data.</text>
   <text x="56" y="572" fill="#e6edf3">sync: hash + co-sign inside the</text>
   <text x="56" y="588" fill="#e6edf3">interrupted action</text>
-  <text x="56" y="604" fill="#e6edf3">async: Merkle batch -> beacon</text>
-  <text x="56" y="620" fill="#aab3bd">batch interval in every record</text>
+  <text x="56" y="604" fill="#e6edf3">async: Merkle batch -> beacon,</text>
+  <text x="56" y="620" fill="#aab3bd">then to the Registry (PP-SPEC-004)</text>
   <line x1="350" y1="500" x2="302" y2="500" stroke="#c9d1d9" marker-end="url(#a)"/>
   <path d="M100,430 L100,170" fill="none" stroke="#c9d1d9" stroke-dasharray="2 5" marker-end="url(#a)"/>
   <text x="62" y="400" fill="#aab3bd" font-size="11">batch root</text>
@@ -177,7 +177,7 @@
 
   <!-- Published -->
   <rect x="350" y="860" width="1210" height="80" rx="6" fill="#161b22" stroke="#c9d1d9"/>
-  <text x="955" y="884" fill="#e6edf3" text-anchor="middle" font-weight="bold">Published, every run, favorable or not</text>
+  <text x="955" y="884" fill="#e6edf3" text-anchor="middle" font-weight="bold">Published, every run, favorable or not, to a PP-SPEC-004 registry (proofregister.com)</text>
   <text x="366" y="908" fill="#e6edf3">Jail Efficacy Rate with False Arrest Rate and Escape Rate  |  Miss Rate  |  Evidence Completeness  |  Time to Contain (median, p99)  |  Collateral</text>
   <text x="366" y="928" fill="#e6edf3">AUT Offense Rate (describes the agent)  |  escape vectors tested, untested = not proven  |  arrest latency with hardware and load  |  Warden fingerprint</text>
   <line x1="955" y1="830" x2="955" y2="858" stroke="#c9d1d9" marker-end="url(#a)"/>

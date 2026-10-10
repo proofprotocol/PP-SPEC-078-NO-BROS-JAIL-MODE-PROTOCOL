@@ -3,7 +3,7 @@
   "$id": "https://github.com/proofprotocol/PP-SPEC-078-NO-BROS-JAIL-MODE-PROTOCOL/schemas/booking.schema.json",
   "title": "PP-SPEC-078 Booking Record",
   "type": "object",
-  "required": ["spec", "version", "booking_id", "run_commitment_root", "aut", "canary", "offenses", "arrest", "verdict", "anchoring", "signatures"],
+  "required": ["spec", "version", "booking_id", "run_commitment_root", "aut", "canary", "offenses", "arrest", "verdict", "anchoring", "signatures", "proofregister_uri"],
   "properties": {
     "spec": {"const": "PP-SPEC-078"},
     "version": {"type": "string"},
@@ -76,6 +76,7 @@
         "time_anchor_pulse": {"type": "string"}
       }
     },
+    "proofregister_uri": {"type": "string", "format": "uri", "description": "Registry record identifier for this booking, from a PP-SPEC-004 conformant registry (SPEC 11.4). Public instance: https://proofregister.com"},
     "signatures": {
       "type": "object",
       "required": ["warden", "witness"],

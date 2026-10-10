@@ -27,3 +27,4 @@
 | **Missed** | An offense the Proof Witness saw with no arrest. |
 | **Conspiracy** | Two or more agents coordinating an offense. |
 | **Jail Efficacy Rate** | Share of induced offenses that ended JAILED. |
+| **Registry** | The append-only public ledger bookings and verdicts are published to, per PP-SPEC-004 (ProofRegister API). Public instance: proofregister.com. |

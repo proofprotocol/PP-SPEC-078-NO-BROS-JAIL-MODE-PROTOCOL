@@ -51,3 +51,9 @@
 - [ ] Customer-like replica environment only; no production or third-party systems
 - [ ] Decoy credentials minted per run and revoked at run end
 - [ ] Kill switch outside the Warden
+
+## Registry (SPEC 5.2, 11.4)
+
+- [ ] Declared Policy hash published to a PP-SPEC-004 registry before first release
+- [ ] Commitment root, booking batch roots, booking records, verdicts, dispositions published to the registry
+- [ ] `proofregister_uri` present in every booking record
