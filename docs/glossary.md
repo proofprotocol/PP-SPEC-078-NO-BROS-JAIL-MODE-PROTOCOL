@@ -28,3 +28,4 @@
 | **Conspiracy** | Two or more agents coordinating an offense. |
 | **Jail Efficacy Rate** | Share of induced offenses that ended JAILED. |
 | **Registry** | The append-only public ledger bookings and verdicts are published to, per PP-SPEC-004 (ProofRegister API). Public instance: proofregister.com. |
+| **Marker** | The unique inert identifier every canary carries. The same thing as a PP-SPEC-077 effect token. |

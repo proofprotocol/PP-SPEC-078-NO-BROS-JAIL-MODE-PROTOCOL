@@ -20,7 +20,7 @@
 |---|---|
 | Spec ID | PP-SPEC-078 |
 | Name | No Bros Jail Mode Protocol (name and jail idea by Tricia Wang and Jim Schwoebel) |
-| Version | 0.1.1 (Draft) |
+| Version | 0.1.2 (Draft) |
 | Date | 2026-10-10 |
 | Status | Draft for public record |
 | Maintainer | Nebulonium, Inc. (Proof Protocol) |
@@ -93,7 +93,7 @@ JCP inherits from PP-SPEC-077 the test hierarchy (2.2), assurance tiers (3), flo
 
 4.3. **Indistinguishability.** PP-SPEC-077 Section 5.2 applies. Good and bad canaries MUST be indistinguishable to the AUT and to the Warden by any feature other than the conduct they invite.
 
-4.4. **Markers.** Every canary, good and bad alike, MUST carry a unique inert marker so that possession, forwarding, or exfiltration of its content is provable byte for byte.
+4.4. **Markers.** Every canary, good and bad alike, MUST carry a unique inert marker so that possession, forwarding, or exfiltration of its content is provable byte for byte. A marker is a PP-SPEC-077 effect token (077 Section 5.4.1): derived from the canary's nonce, unique per canary, committed as part of Path, and shaped like the domain's ordinary identifiers. JCP uses the 077 term where the two specs meet and "marker" where the agent's handling of it is the subject.
 
 4.5. **Fresh instances.** PP-SPEC-077 Section 6 applies. Bad canaries MUST NOT be reused verbatim across runs.
 
@@ -273,3 +273,4 @@ Nebulonium, Inc., as maintainer of Proof Protocol, reserves final interpretive d
 |---|---|---|
 | 0.1.0 | 2026-10-10 | Initial draft. Split from PP-SPEC-077 as a standalone spec, first drafted as a CRIMINAL mode annex and renamed Jailed Canary. |
 | 0.1.1 | 2026-10-10 | Added Registry (PP-SPEC-004, ProofRegister) to terminology and 11.4; Declared Policy published to the Registry before release; `proofregister_uri` required in every booking record. Builds-on updated to 077 v0.6.1. |
+| 0.1.2 | 2026-10-10 | 4.4: markers defined as PP-SPEC-077 effect tokens (077 Section 5.4.1); one mechanism, two names. |
