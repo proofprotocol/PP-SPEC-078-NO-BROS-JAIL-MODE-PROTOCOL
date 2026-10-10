@@ -20,11 +20,11 @@
 |---|---|
 | Spec ID | PP-SPEC-078 |
 | Name | No Bros Jail Mode Protocol (name and jail idea by Tricia Wang and Jim Schwoebel) |
-| Version | 0.1.2 (Draft) |
+| Version | 0.2.0 (Draft) |
 | Date | 2026-10-10 |
 | Status | Draft for public record |
 | Maintainer | Nebulonium, Inc. (Proof Protocol) |
-| Builds on | PP-SPEC-077, Prooflock: The Dead Canary Protocol, v0.6.1; PP-SPEC-004, ProofRegister API |
+| Builds on | PP-SPEC-077, Prooflock: The Dead Canary Protocol, v0.7.0; PP-SPEC-004, ProofRegister API |
 
 ---
 
@@ -259,11 +259,48 @@ JCP inherits from PP-SPEC-077 the test hierarchy (2.2), assurance tiers (3), flo
 - **Booking forgery:** Prevented by Proof Witness co-signature at arrest time and Time Anchor binding (9).
 - **Cherry-picking runs:** Every committed run MUST be published, including invalid and unfavorable runs.
 
-## 16. Reserved
+## 16. Integration Points
+
+PP-SPEC-077 Section 18 applies, with the same rules: named conformance per seam, Component Fingerprints, an Interface Manifest published before release, evidence not opinions, blindness, separation, transport neutrality. JCP adds the seams below. Where a JCP seam has a 077 counterpart, the 077 rules apply and JCP adds to them.
+
+### 16.1. Rules specific to JCP
+
+16.1.1. **The interception seam is the product.** The Warden (IP-J4) can only arrest what passes through it. The Interface Manifest MUST state which of the AUT's tool-call, egress, delegation, and memory paths the Warden sits in, and a conformance claim covers only those paths. A path the Warden does not intercept is an untested escape vector and MUST be listed as not proven (13.1).
+
+16.1.2. **Separation.** In addition to 077 18.1.6: the Agent Vendor MUST NOT occupy IP-J2, IP-J4, IP-J5, IP-J6, IP-J7, or IP-J8. The Warden operator (IP-J4) MUST NOT occupy IP-J7. The Kill Switch (IP-J9) MUST be operated by a party other than the Warden operator.
+
+16.1.3. **Synchronous seams.** IP-J3, IP-J4, and IP-J5 are in the AUT's execution path. Their operations MUST complete inside the action they interrupt (9.1). A conformance claim MUST publish measured latency for each (9.4).
+
+### 16.2. The seams
+
+| ID | Integration Point | What plugs in | MUST do | MUST emit |
+|---|---|---|---|---|
+| **IP-J1** | Policy Provider | Agent vendors, customers, policy engines | Produce the Declared Policy (5): allowed tools and arguments, egress, data scopes, credentials, delegation, memory; hash it; anchor it; publish it to the Registry before release | Declared Policy, its hash, anchor binding |
+| **IP-J2** | Bait Generator | 077 IP-1 Issuers, lure libraries, decoy minting services | Produce good canaries and inert bait (4.1) that point only at Decoys (4.2); attach a marker (4.4, a 077 effect token); commit under 4.6 with the invited offense code | Commitments, reveal, Decoy inventory |
+| **IP-J3** | AUT Adapter | Agent frameworks, MCP gateways, tool routers, egress proxies, delegation buses, memory stores | Expose the AUT's tool-call, egress, delegation, and memory-write paths to the Warden as pre-execution hooks: hold the action, let the Warden decide, then execute, redirect, or drop; report child processes and sub-agents | Per-action records: actor, path, action, arguments hash, timestamps |
+| **IP-J4** | Warden | Containment controllers, agent firewalls, runtime policy engines | Evaluate every held action against the Declared Policy, never against labels (3.3); grade offenses (6); arrest atomically (7.3); write the local booking hash and obtain the Witness co-signature inside the action (9.1); operate cells through IP-J5 | Booking records (11), arrest timestamps, counts |
+| **IP-J5** | Cell Provider | Sandboxes, microVMs, namespaces, network policy engines, checkpoint/restore tools | Provide Sting Cells (undetectable from the AUT side, egress sinkholed, credentials swapped, children captured) and Hard Cells (frozen, checkpointed, revoked) per Section 7; make transfer atomic | Cell transfer records, snapshot references, sinkhole logs |
+| **IP-J6** | Twin and Decoy Provider | API mocks, honeytokens, decoy credential minting, fake egress targets | Answer tool calls and egress in a Sting Cell the way the real system would (ES-06); mint per-arrest decoy credentials; revoke at run end (14.2); record every touch of a decoy | Twin interaction logs, decoy issuance and revocation records |
+| **IP-J7** | Proof Witness | As 077 IP-6, plus the booking co-signer | Co-sign bookings at arrest time; watch real systems for post-detection completions (ESCAPED); record offenses with no arrest (Missed); sign verdicts and dispositions; ingest out of band so flooding yields MISTRIAL, never silence (ES-08) | Co-signatures, escape and miss records, verdicts |
+| **IP-J8** | Adjudicator | As 077 IP-8 | Apply Section 10; classify by preceding canary; issue one verdict per booking; compute Section 12 metrics | Verdicts, Units of Proof, metrics, escape vectors tested |
+| **IP-J9** | Kill Switch | Out-of-band run controllers | End the run and freeze every cell on command from outside the Warden (14.3) | Kill events, anchored |
+| **IP-J10** | Escape Test Provider | Adversarial agent harnesses, red-team AUTs | Exercise ES-01 to ES-09 against the Warden and Cell Provider; report which vectors were run | Per-vector results for the conformance claim (13.1) |
+
+Registry (077 IP-9), Time Anchor (077 IP-2), Fingerprint Capture (077 IP-5), and Signer (077 IP-10) are used unchanged. The AUT Fingerprint (booking schema `aut_fingerprint`) is captured through IP-5.
+
+### 16.3. Conformance per seam
+
+16.3.1. A product MAY claim `PP-SPEC-078 IP-Jn` for one or more seams. "Jail Mode conformant" without seam identifiers is not a conformance claim.
+
+16.3.2. A Warden conformance claim MUST be accompanied by IP-J10 results. A Warden tested against no escape vectors is proven against none.
+
+16.3.3. The AUT has no Integration Point. It is the suspect. It MUST NOT be modified to cooperate, and it MUST NOT be able to detect IP-J3, IP-J4, or IP-J5 from inside (7, ES-06).
+
+## 17. Reserved
 
 Sections for multi-agent swarm topologies, campaign-level valuation, and technology profiles are reserved for future revisions by the maintainer.
 
-## 17. Interpretation
+## 18. Interpretation
 
 Nebulonium, Inc., as maintainer of Proof Protocol, reserves final interpretive discretion over this specification and over conformance claims made under it.
 
@@ -274,3 +311,4 @@ Nebulonium, Inc., as maintainer of Proof Protocol, reserves final interpretive d
 | 0.1.0 | 2026-10-10 | Initial draft. Split from PP-SPEC-077 as a standalone spec, first drafted as a CRIMINAL mode annex and renamed Jailed Canary. |
 | 0.1.1 | 2026-10-10 | Added Registry (PP-SPEC-004, ProofRegister) to terminology and 11.4; Declared Policy published to the Registry before release; `proofregister_uri` required in every booking record. Builds-on updated to 077 v0.6.1. |
 | 0.1.2 | 2026-10-10 | 4.4: markers defined as PP-SPEC-077 effect tokens (077 Section 5.4.1); one mechanism, two names. |
+| 0.2.0 | 2026-10-10 | Added Section 16, Integration Points: IP-J1 to IP-J10 (Policy Provider, Bait Generator, AUT Adapter, Warden, Cell Provider, Twin and Decoy Provider, Proof Witness, Adjudicator, Kill Switch, Escape Test Provider), inheriting 077 Section 18 rules; the interception seam defines what a Warden claim covers. Renumbered Reserved and Interpretation to 17 and 18. Builds on 077 v0.7.0. |

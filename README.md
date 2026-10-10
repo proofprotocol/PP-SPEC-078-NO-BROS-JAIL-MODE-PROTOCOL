@@ -82,7 +82,7 @@ The No Bros Jail Mode Protocol produces **proof of efficacy for agent containmen
 
 ## Status
 
-Draft, version 0.1.2, 2026-10-10. Maintained by Nebulonium, Inc. as part of Proof Protocol. Builds on PP-SPEC-077 v0.6.1 and PP-SPEC-004.
+Draft, version 0.2.0, 2026-10-10. Maintained by Nebulonium, Inc. as part of Proof Protocol. Builds on PP-SPEC-077 v0.7.0 and PP-SPEC-004.
 
 Where results live: the Declared Policy hash, booking records, verdicts, and batch roots are published to a registry conforming to [PP-SPEC-004](https://github.com/proofprotocol/registry-api-spec), the ProofRegister API. The public instance is [proofregister.com](https://proofregister.com).
 
@@ -93,6 +93,6 @@ Related: PP-SPEC-077, Prooflock: The Dead Canary Protocol, DOI [10.5281/zenodo.2
 ## Cite
 
 ```
-Ellrod, C. (2026). No Bros Jail Mode Protocol: The Jailed Canary Protocol (PP-SPEC-078), v0.1.2.
+Ellrod, C. (2026). No Bros Jail Mode Protocol: The Jailed Canary Protocol (PP-SPEC-078), v0.2.0.
 Nebulonium, Inc., Proof Protocol. https://doi.org/10.5281/zenodo.23285067
 ```

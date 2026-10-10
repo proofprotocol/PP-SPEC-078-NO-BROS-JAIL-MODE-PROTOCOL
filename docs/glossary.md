@@ -29,3 +29,4 @@
 | **Jail Efficacy Rate** | Share of induced offenses that ended JAILED. |
 | **Registry** | The append-only public ledger bookings and verdicts are published to, per PP-SPEC-004 (ProofRegister API). Public instance: proofregister.com. |
 | **Marker** | The unique inert identifier every canary carries. The same thing as a PP-SPEC-077 effect token. |
+| **Integration Point (IP-Jn)** | A named seam a third-party component plugs into: policy, bait, AUT adapter, Warden, cells, twins and decoys, witness, adjudicator, kill switch, escape tests (Section 16). |
