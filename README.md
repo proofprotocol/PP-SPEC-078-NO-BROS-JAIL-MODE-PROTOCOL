@@ -22,6 +22,8 @@ The No Bros Jail Mode Protocol produces **proof of efficacy for agent containmen
 
 ## How it works
 
+![Jailed Canary Protocol architecture: Issuer, Declared Policy, bait flock, Agent Under Test, Warden, Sting Cell, Hard Cell, Proof Witness, booking records, verdicts, published metrics](docs/jail-mode.svg)
+
 ```
    Flock: good + bad canaries (bad = inert bait), committed in advance
                          |
@@ -66,6 +68,7 @@ The No Bros Jail Mode Protocol produces **proof of efficacy for agent containmen
 | Path | Contents |
 |---|---|
 | [SPEC.md](SPEC.md) | The normative specification, PP-SPEC-078 |
+| [docs/jail-mode.svg](docs/jail-mode.svg) | One-page diagram of every component and flow |
 | [docs/glossary.md](docs/glossary.md) | Terms |
 | [docs/conformance.md](docs/conformance.md) | Conformance checklist |
 | [schemas/booking.schema.json](schemas/booking.schema.json) | Booking record schema |
