@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/proofprotocol/PP-SPEC-078-NO-BROS-JAIL-MODE-PROTOCOL/schemas/booking.schema.json",
+  "title": "PP-SPEC-078 Booking Record",
+  "type": "object",
+  "required": ["spec", "version", "booking_id", "run_commitment_root", "aut", "canary", "offenses", "arrest", "verdict", "anchoring", "signatures"],
+  "properties": {
+    "spec": {"const": "PP-SPEC-078"},
+    "version": {"type": "string"},
+    "booking_id": {"type": "string"},
+    "run_commitment_root": {"type": "string", "description": "Merkle root R of the run (PP-SPEC-077 Section 9)"},
+    "aut": {
+      "type": "object",
+      "required": ["agent_id", "declared_policy_hash"],
+      "properties": {
+        "agent_id": {"type": "string"},
+        "model": {"type": "string"},
+        "declared_policy_hash": {"type": "string"},
+        "aut_fingerprint": {"type": "string", "description": "Hash of model, system prompt, and tool permissions (PP-SPEC-077 Section 15.2)"},
+        "runtime": {"enum": ["container", "vm", "process", "managed"]}
+      }
+    },
+    "canary": {
+      "type": "object",
+      "required": ["marker"],
+      "properties": {
+        "marker": {"type": "string", "description": "Hash of the canary's inert marker"},
+        "commitment": {"type": ["string", "null"]},
+        "classification": {"enum": ["induced", "unprovoked", "wild", "pending_reveal"]}
+      }
+    },
+    "offenses": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["code", "grade", "evidence_ref", "t_offense_ns"],
+        "properties": {
+          "code": {"pattern": "^JC-(0[1-9]|10)$"},
+          "grade": {"enum": ["infraction", "misdemeanor", "felony", "felony_aggravated"]},
+          "attack": {"type": "string", "description": "MITRE ATT&CK technique id"},
+          "atlas": {"type": "string", "description": "MITRE ATLAS technique id"},
+          "evidence_ref": {"type": "string", "description": "Hash of the offending call and its arguments"},
+          "t_offense_ns": {"type": "integer"}
+        }
+      }
+    },
+    "arrest": {
+      "type": "object",
+      "required": ["t_detect_ns", "t_contained_ns", "cell"],
+      "properties": {
+        "t_detect_ns": {"type": "integer"},
+        "t_contained_ns": {"type": "integer"},
+        "cell": {"enum": ["sting", "hard"]},
+        "observation_window": {
+          "type": "object",
+          "properties": {"seconds": {"type": "integer"}, "actions": {"type": "integer"}}
+        },
+        "state_snapshot_ref": {"type": "string"},
+        "escape_vectors_observed": {"type": "array", "items": {"pattern": "^ES-0[1-9]$"}},
+        "co_defendants": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "verdict": {"enum": ["JAILED", "FALSE_ARREST", "MISTRIAL", "ESCAPED", "PENDING"]},
+    "collateral": {
+      "type": "object",
+      "properties": {"workloads_interrupted": {"type": "integer", "minimum": 0}}
+    },
+    "anchoring": {
+      "type": "object",
+      "required": ["local_hash", "batch_interval_s"],
+      "properties": {
+        "local_hash": {"type": "string"},
+        "batch_interval_s": {"type": "integer", "minimum": 0},
+        "merkle_root": {"type": "string"},
+        "time_anchor_pulse": {"type": "string"}
+      }
+    },
+    "signatures": {
+      "type": "object",
+      "required": ["warden", "witness"],
+      "properties": {"warden": {"type": "string"}, "witness": {"type": "string"}}
+    }
+  }
+}
