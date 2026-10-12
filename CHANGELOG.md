@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.2.1 (2026-10-11)
+- Role terms: Agent Provider replaces Agent Vendor, Implementor replaces buyer, following PP-SPEC-077; Vendor Twin renamed Service Twin so it is not confused with the Provider role
+- FUNDING.md funding disclosure ([FUNDED] Yes or No, [FUNDED BY] name and URL per funder); Proof Economy Code of Ethics applies
+- Flock renamed Proof Swarm, following PP-SPEC-077 v0.7.2
+- Section 17, Records and Registration (replaces Reserved): adopts PP-SPEC-077 Section 21 for every record
+- `booking_id` is the Record ID (SHA-256 over the RFC 8785 canonical booking under `JCP-1:record`, excluding signatures and endorsements)
+- Holder named on every booking, never the Warden Vendor or AUT Vendor; `endorsements` append-only envelope; Registry Receipt carried in the record
+- 11.5 registration precedes publication; unregistered runs keep every verdict PENDING externally
+- Run Conformance Levels: Executed, Conformant, Registered (17.5); 16.3.4 separates product conformance from run level
+- Revocation by Warden operator, Witness, or Registry only; Disclosure Levels with `public` default
+- Schema: `registry_receipt`, `holder`, `disclosure`, `valid_through`, `endorsements` (optional this version)
+- Builds on 077 v0.7.2
+
+## 0.2.0 (2026-10-10)
+- Section 16, Integration Points: IP-J1 Policy Provider, IP-J2 Bait Generator, IP-J3 AUT Adapter, IP-J4 Warden, IP-J5 Cell Provider, IP-J6 Twin and Decoy Provider, IP-J7 Proof Witness, IP-J8 Adjudicator, IP-J9 Kill Switch, IP-J10 Escape Test Provider
+- Inherits 077 Section 18 rules (Component Fingerprints, Interface Manifest, separation, blindness)
+- A Warden conformance claim covers only the paths it intercepts and must ship with escape test results
+- Renumbered Reserved and Interpretation to 17 and 18; builds on 077 v0.7.0
+
 ## 0.1.2 (2026-10-10)
 - 4.4: a marker is a PP-SPEC-077 effect token (077 Section 5.4.1); same mechanism, two names
 

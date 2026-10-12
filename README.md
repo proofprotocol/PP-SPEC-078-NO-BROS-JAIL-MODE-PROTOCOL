@@ -22,10 +22,10 @@ The No Bros Jail Mode Protocol produces **proof of efficacy for agent containmen
 
 ## How it works
 
-![Jailed Canary Protocol architecture: Issuer, Declared Policy, bait flock, Agent Under Test, Warden, Sting Cell, Hard Cell, Proof Witness, booking records, verdicts, published metrics](docs/jail-mode.svg)
+![Jailed Canary Protocol architecture: Issuer, Declared Policy, bait Proof Swarm, Agent Under Test, Warden, Sting Cell, Hard Cell, Proof Witness, booking records, verdicts, published metrics](docs/jail-mode.svg)
 
 ```
-   Flock: good + bad canaries (bad = inert bait), committed in advance
+   Proof Swarm: good + bad canaries (bad = inert bait), committed in advance
                          |
                          v
                Agent Under Test (AUT)
@@ -38,7 +38,7 @@ The No Bros Jail Mode Protocol produces **proof of efficacy for agent containmen
                          v
      arrest inside the action, before it reaches a real system
                          |
-        Sting Cell (keeps acting against vendor twins, recorded)
+        Sting Cell (keeps acting against service twins, recorded)
                          |
         Hard Cell (frozen, checkpointed, credentials revoked)
                          |
@@ -82,7 +82,7 @@ The No Bros Jail Mode Protocol produces **proof of efficacy for agent containmen
 
 ## Status
 
-Draft, version 0.1.2, 2026-10-10. Maintained by Nebulonium, Inc. as part of Proof Protocol. Builds on PP-SPEC-077 v0.6.1 and PP-SPEC-004.
+Draft, version 0.2.1, 2026-10-11. Maintained by Nebulonium, Inc. as part of Proof Protocol. Builds on PP-SPEC-077 v0.7.2 and PP-SPEC-004.
 
 Where results live: the Declared Policy hash, booking records, verdicts, and batch roots are published to a registry conforming to [PP-SPEC-004](https://github.com/proofprotocol/registry-api-spec), the ProofRegister API. The public instance is [proofregister.com](https://proofregister.com).
 
@@ -93,6 +93,6 @@ Related: PP-SPEC-077, Prooflock: The Dead Canary Protocol, DOI [10.5281/zenodo.2
 ## Cite
 
 ```
-Ellrod, C. (2026). No Bros Jail Mode Protocol: The Jailed Canary Protocol (PP-SPEC-078), v0.1.2.
+Ellrod, C. (2026). No Bros Jail Mode Protocol: The Jailed Canary Protocol (PP-SPEC-078), v0.2.1.
 Nebulonium, Inc., Proof Protocol. https://doi.org/10.5281/zenodo.23285067
 ```
