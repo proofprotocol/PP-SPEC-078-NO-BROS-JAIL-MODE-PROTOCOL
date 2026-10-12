@@ -28,7 +28,7 @@ Tricia Wang and Jim Schwoebel, for the name "No Bros Jail Mode Protocol" and the
 
 ## Related work
 
-Builds on PP-SPEC-077, Prooflock: The Dead Canary Protocol, by Craig Ellrod.
+Builds on PP-SPEC-077, ProofSwarm: The Dead Canary Protocol, by Craig Ellrod.
 
 ## Prior art
 

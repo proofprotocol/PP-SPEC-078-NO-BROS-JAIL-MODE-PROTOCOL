@@ -104,7 +104,7 @@ Where results live: the Declared Policy hash, booking records, verdicts, and bat
 
 Archived: v0.1.2 on Zenodo, DOI [10.5281/zenodo.23285067](https://doi.org/10.5281/zenodo.23285067).
 
-Related: PP-SPEC-077, Prooflock: The Dead Canary Protocol, DOI [10.5281/zenodo.23285061](https://doi.org/10.5281/zenodo.23285061). Proof Economy Prior Art Declaration, DOI [10.5281/zenodo.21379780](https://doi.org/10.5281/zenodo.21379780).
+Related: PP-SPEC-077, ProofSwarm: The Dead Canary Protocol, DOI [10.5281/zenodo.23285061](https://doi.org/10.5281/zenodo.23285061). Proof Economy Prior Art Declaration, DOI [10.5281/zenodo.21379780](https://doi.org/10.5281/zenodo.21379780).
 
 ## Cite
 
