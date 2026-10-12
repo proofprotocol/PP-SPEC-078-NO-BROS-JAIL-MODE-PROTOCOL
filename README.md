@@ -1,5 +1,7 @@
 # No Bros Jail Mode Protocol: The Jailed Canary Protocol
 
+<img src="docs/banner.jpg" width="480" alt="078 No Bros. JailBird.: a punk canary behind the bars of a jail cell">
+
 > **Ownership and Attribution Notice**
 >
 > The No Bros Jail Mode Protocol and the Jailed Canary Protocol (PP-SPEC-078) are authored by **Craig Ellrod** (Nebulonium, Inc., dba HACKERverse) and published as part of **Proof Protocol**. Copyright (c) 2026 Nebulonium, Inc.
