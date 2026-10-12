@@ -24,7 +24,7 @@
 | Date | 2026-10-11 |
 | Status | Draft for public record |
 | Maintainer | Nebulonium, Inc. (Proof Protocol) |
-| Builds on | PP-SPEC-077, Prooflock: The Dead Canary Protocol, v0.7.2; PP-SPEC-004, ProofRegister API |
+| Builds on | PP-SPEC-077, ProofSwarm: The Dead Canary Protocol, v0.7.2; PP-SPEC-004, ProofRegister API |
 
 ---
 
