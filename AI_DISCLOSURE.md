@@ -55,7 +55,7 @@ AI systems: Anthropic Claude (Fable 5.1, Opus 5.5); OpenAI ChatGPT (banner image
 - The Agent Under Test (AUT) term, derived with CUT from DUT and SUT in his book *Technical Marketing* (2008), and added to PP-SPEC-077.
 - The framing that 077 tests the data path and 078 tests the agent, refined into "the payload is the adversary" versus "the actor is the adversary".
 - The Proof Witness, canaries, Proof Swarm, commitment, Time Anchor, Unit of Proof, and assurance tiers, all inherited from PP-SPEC-077, which he authored.
-- The ownership position: sole authorship, Greater Good Commercial License 1.0 (text CC BY-ND 4.0), patent rights reserved, mandatory attribution, and the acknowledgment of Tricia Wang and Jim Schwoebel.
+- The ownership position: sole authorship, Greater Good Commercial License 1.0 (text CC BY 4.0), patent rights reserved, mandatory attribution, and the acknowledgment of Tricia Wang and Jim Schwoebel.
 
 **Tricia Wang and Jim Schwoebel:** the name "No Bros Jail Mode Protocol" and the jail idea.
 
