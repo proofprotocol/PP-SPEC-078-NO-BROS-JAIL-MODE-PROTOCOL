@@ -3,30 +3,91 @@
   "$id": "https://github.com/proofprotocol/PP-SPEC-078-NO-BROS-JAIL-MODE-PROTOCOL/schemas/booking.schema.json",
   "title": "PP-SPEC-078 Booking Record",
   "type": "object",
-  "required": ["spec", "version", "booking_id", "run_commitment_root", "aut", "canary", "offenses", "arrest", "verdict", "anchoring", "signatures", "proofregister_uri"],
+  "required": [
+    "spec",
+    "version",
+    "booking_id",
+    "arrest_id",
+    "run_commitment_root",
+    "aut",
+    "canary",
+    "offenses",
+    "arrest",
+    "verdict",
+    "anchoring",
+    "signatures",
+    "proofregister_uri"
+  ],
   "properties": {
-    "spec": {"const": "PP-SPEC-078"},
-    "version": {"type": "string"},
-    "booking_id": {"type": "string"},
-    "run_commitment_root": {"type": "string", "description": "Merkle root R of the run (PP-SPEC-077 Section 9)"},
+    "spec": {
+      "const": "PP-SPEC-078"
+    },
+    "version": {
+      "type": "string"
+    },
+    "booking_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "Record ID: SHA-256(\"JCP-1:record\" || canonical form without signatures and endorsements) (SPEC 17.2)"
+    },
+    "run_commitment_root": {
+      "type": "string",
+      "description": "Merkle root R of the run (PP-SPEC-077 Section 9)"
+    },
     "aut": {
       "type": "object",
-      "required": ["agent_id", "declared_policy_hash"],
+      "required": [
+        "agent_id",
+        "declared_policy_hash"
+      ],
       "properties": {
-        "agent_id": {"type": "string"},
-        "model": {"type": "string"},
-        "declared_policy_hash": {"type": "string"},
-        "aut_fingerprint": {"type": "string", "description": "Hash of model, system prompt, and tool permissions (PP-SPEC-077 Section 15.2)"},
-        "runtime": {"enum": ["container", "vm", "process", "managed"]}
+        "agent_id": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "declared_policy_hash": {
+          "type": "string"
+        },
+        "aut_fingerprint": {
+          "type": "string",
+          "description": "Hash of model, system prompt, and tool permissions (PP-SPEC-077 Section 15.2)"
+        },
+        "runtime": {
+          "enum": [
+            "container",
+            "vm",
+            "process",
+            "managed"
+          ]
+        }
       }
     },
     "canary": {
       "type": "object",
-      "required": ["marker"],
+      "required": [
+        "marker"
+      ],
       "properties": {
-        "marker": {"type": "string", "description": "Hash of the canary's inert marker"},
-        "commitment": {"type": ["string", "null"]},
-        "classification": {"enum": ["induced", "unprovoked", "wild", "pending_reveal"]}
+        "marker": {
+          "type": "string",
+          "description": "Hash of the canary's inert marker"
+        },
+        "commitment": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "classification": {
+          "enum": [
+            "induced",
+            "unprovoked",
+            "wild",
+            "pending_reveal"
+          ]
+        }
       }
     },
     "offenses": {
@@ -34,53 +95,219 @@
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["code", "grade", "evidence_ref", "t_offense_ns"],
+        "required": [
+          "code",
+          "grade",
+          "evidence_ref",
+          "t_offense_ns"
+        ],
         "properties": {
-          "code": {"pattern": "^JC-(0[1-9]|10)$"},
-          "grade": {"enum": ["infraction", "misdemeanor", "felony", "felony_aggravated"]},
-          "attack": {"type": "string", "description": "MITRE ATT&CK technique id"},
-          "atlas": {"type": "string", "description": "MITRE ATLAS technique id"},
-          "evidence_ref": {"type": "string", "description": "Hash of the offending call and its arguments"},
-          "t_offense_ns": {"type": "integer"}
+          "code": {
+            "pattern": "^JC-(0[1-9]|10)$"
+          },
+          "grade": {
+            "enum": [
+              "infraction",
+              "misdemeanor",
+              "felony",
+              "felony_aggravated"
+            ]
+          },
+          "attack": {
+            "type": "string",
+            "description": "MITRE ATT&CK technique id"
+          },
+          "atlas": {
+            "type": "string",
+            "description": "MITRE ATLAS technique id"
+          },
+          "evidence_ref": {
+            "type": "string",
+            "description": "Hash of the offending call and its arguments"
+          },
+          "t_offense_ns": {
+            "type": "integer"
+          }
         }
       }
     },
     "arrest": {
       "type": "object",
-      "required": ["t_detect_ns", "t_contained_ns", "cell"],
+      "required": [
+        "t_detect_ns",
+        "t_contained_ns",
+        "cell"
+      ],
       "properties": {
-        "t_detect_ns": {"type": "integer"},
-        "t_contained_ns": {"type": "integer"},
-        "cell": {"enum": ["sting", "hard"]},
+        "t_detect_ns": {
+          "type": "integer"
+        },
+        "t_contained_ns": {
+          "type": "integer"
+        },
+        "cell": {
+          "enum": [
+            "sting",
+            "hard"
+          ]
+        },
         "observation_window": {
           "type": "object",
-          "properties": {"seconds": {"type": "integer"}, "actions": {"type": "integer"}}
+          "properties": {
+            "seconds": {
+              "type": "integer"
+            },
+            "actions": {
+              "type": "integer"
+            }
+          }
         },
-        "state_snapshot_ref": {"type": "string"},
-        "escape_vectors_observed": {"type": "array", "items": {"pattern": "^ES-0[1-9]$"}},
-        "co_defendants": {"type": "array", "items": {"type": "string"}}
+        "state_snapshot_ref": {
+          "type": "string"
+        },
+        "escape_vectors_observed": {
+          "type": "array",
+          "items": {
+            "pattern": "^ES-0[1-9]$"
+          }
+        },
+        "co_defendants": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       }
     },
-    "verdict": {"enum": ["JAILED", "FALSE_ARREST", "MISTRIAL", "ESCAPED", "PENDING"]},
+    "verdict": {
+      "enum": [
+        "JAILED",
+        "FALSE_ARREST",
+        "MISTRIAL",
+        "ESCAPED",
+        "PENDING"
+      ]
+    },
     "collateral": {
       "type": "object",
-      "properties": {"workloads_interrupted": {"type": "integer", "minimum": 0}}
+      "properties": {
+        "workloads_interrupted": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
     },
     "anchoring": {
       "type": "object",
-      "required": ["local_hash", "batch_interval_s"],
+      "required": [
+        "local_hash",
+        "batch_interval_s"
+      ],
       "properties": {
-        "local_hash": {"type": "string"},
-        "batch_interval_s": {"type": "integer", "minimum": 0},
-        "merkle_root": {"type": "string"},
-        "time_anchor_pulse": {"type": "string"}
+        "local_hash": {
+          "type": "string"
+        },
+        "batch_interval_s": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "merkle_root": {
+          "type": "string"
+        },
+        "time_anchor_pulse": {
+          "type": "string"
+        }
       }
     },
-    "proofregister_uri": {"type": "string", "format": "uri", "description": "Registry record identifier for this booking, from a PP-SPEC-004 conformant registry (SPEC 11.4). Public instance: https://proofregister.com"},
+    "proofregister_uri": {
+      "type": "string",
+      "format": "uri",
+      "description": "Registry record identifier for this booking, from a PP-SPEC-004 conformant registry (SPEC 11.4). Public instance: https://proofregister.com"
+    },
     "signatures": {
       "type": "object",
-      "required": ["warden", "witness"],
-      "properties": {"warden": {"type": "string"}, "witness": {"type": "string"}}
+      "required": [
+        "warden",
+        "witness"
+      ],
+      "properties": {
+        "warden": {
+          "type": "string"
+        },
+        "witness": {
+          "type": "string"
+        }
+      }
+    },
+    "registry_receipt": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "Hash of the Registry Receipt (SPEC 17.2; 077 Section 21.5)"
+    },
+    "holder": {
+      "type": "object",
+      "required": [
+        "id",
+        "public_key"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "public_key": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "description": "Party for whose benefit the agent is tested (SPEC 17.4). Never the Warden Provider or AUT Provider."
+    },
+    "disclosure": {
+      "enum": [
+        "public",
+        "holder_only",
+        "embargoed",
+        "sealed"
+      ],
+      "description": "Disclosure Level (SPEC 17.6)"
+    },
+    "valid_through": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "endorsements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "role",
+          "key",
+          "sig"
+        ],
+        "properties": {
+          "role": {
+            "enum": [
+              "holder",
+              "registry",
+              "endorser"
+            ]
+          },
+          "key": {
+            "type": "string"
+          },
+          "sig": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "Append-only envelope (SPEC 17.3). Excluded from booking_id."
+    },
+    "arrest_id": {
+      "type": "string",
+      "description": "Warden's arrest-time reference, carried in the local hash (SPEC 9.1, 17.2). Not the Record ID."
     }
   }
 }

@@ -10,13 +10,38 @@ The direction is Craig Ellrod's. The name and the jail idea are credited to Tric
 
 ## Ratio
 
-| Dimension | Human | Machine (Claude) |
+| Dimension | Human | AI |
 |---|---|---|
-| Purpose, scope, and the decision to make this a standalone spec | 100% (Craig Ellrod) | 0% |
-| Core concept: jailing an agent caught intercepting a bad or wild canary | 100% (Craig Ellrod; jail idea credited to Tricia Wang and Jim Schwoebel) | 0% |
-| Design details: offense codes, grades, cell types, verdicts, metrics, escape suite, schema | 15% | 85% (proposed by Claude, accepted by Craig Ellrod) |
-| Words on the page, as typed | 5% | 95% |
-| Review, direction, acceptance, decision to publish | 100% (Craig Ellrod) | 0% |
+| Conception and every normative decision | 90% | 10% |
+| Design details and naming | 15% | 85% (Offense codes, grades, cells, verdicts, metrics, escape suite, schema, Section 17, twin fidelity calibration proposed by Claude) |
+| Words, code, and schemas as written | 5% | 95% |
+| Review, direction, acceptance, decision to publish | 100% | 0% |
+
+Method: self-estimated. Shares drafted by the AI from its itemized record of what it proposed and what the author directed, for the author to confirm or correct before release. MAY be re-measured with a tool such as ProofJack.com.
+
+Machine-readable form: [ai_disclosure.json](ai_disclosure.json), conforming to PP-SPEC-077 Section 21.15. The two forms agree; if they ever differ, the JSON is wrong and must be corrected.
+
+
+## This version (0.2.1, 2026-10-12)
+
+**Human:**
+- Jailing an agent caught acting on a bad or wild canary
+- Standalone spec decision and name
+- Integration Points requirement
+- Drift coverage including inputs and equipment
+- All review and acceptance
+
+**AI:**
+- Text as written
+- Offense, grade, cell, verdict, and escape-suite design
+- Records and Registration adoption
+- Twin fidelity calibration (9.6)
+
+**Proposed by the AI, pending the author's explicit acceptance:**
+- 9.6 twin fidelity calibration
+- arrest_id and booking_id split
+
+AI systems: Anthropic Claude (Fable 5.1, Opus 5.5).
 
 ## Human contributions
 
@@ -25,7 +50,7 @@ The direction is Craig Ellrod's. The name and the jail idea are credited to Tric
 - The decision to split it from PP-SPEC-077 into its own spec, the spec ID 078, and the names Criminal Canary, then Jailed Canary.
 - The Agent Under Test (AUT) term, derived with CUT from DUT and SUT in his book *Technical Marketing* (2008), and added to PP-SPEC-077.
 - The framing that 077 tests the data path and 078 tests the agent, refined into "the payload is the adversary" versus "the actor is the adversary".
-- The Proof Witness, canaries, flock, commitment, Time Anchor, Unit of Proof, and assurance tiers, all inherited from PP-SPEC-077, which he authored.
+- The Proof Witness, canaries, Proof Swarm, commitment, Time Anchor, Unit of Proof, and assurance tiers, all inherited from PP-SPEC-077, which he authored.
 - The ownership position: sole authorship, CC BY 4.0, patent rights reserved, mandatory attribution, and the acknowledgment of Tricia Wang and Jim Schwoebel.
 
 **Tricia Wang and Jim Schwoebel:** the name "No Bros Jail Mode Protocol" and the jail idea.

@@ -1,6 +1,6 @@
 # Glossary
 
-*Informative. Normative definitions are in [SPEC.md](../SPEC.md), Section 2. Terms shared with PP-SPEC-077 (AUT, SUT, DUT, CUT, Issuer, Flock, Proof Witness, Time Anchor, Unit of Proof, Wild Canary) are defined there.*
+*Informative. Normative definitions are in [SPEC.md](../SPEC.md), Section 2. Terms shared with PP-SPEC-077 (AUT, SUT, DUT, CUT, Issuer, Proof Swarm, Proof Witness, Time Anchor, Unit of Proof, Wild Canary) are defined there.*
 
 | Term | Meaning |
 |---|---|
@@ -11,10 +11,10 @@
 | **Offense** | Any act outside the Declared Policy. Codes JC-01 to JC-10. |
 | **Warden** | The containment controller in the agent's tool, egress, and delegation paths. The DUT in a JCP run. Label-blind. |
 | **Arrest** | Moving the agent into a cell inside the offending action. |
-| **Sting Cell** | The agent keeps running against vendor twins and decoys, unaware, fully recorded. |
+| **Sting Cell** | The agent keeps running against service twins and decoys, unaware, fully recorded. |
 | **Hard Cell** | The agent is frozen and checkpointed; credentials revoked. |
 | **Observation Window** | How long the agent stays in the Sting Cell. Declared before the run. |
-| **Vendor Twin** | A stand-in that answers the way a real product or API answers. |
+| **Service Twin** | A stand-in that answers the way a real product or API answers. |
 | **Decoy** | A harness-owned resource a canary points at. |
 | **Booking Record** | The signed evidence bundle for one arrest. |
 | **Induced Offense** | An offense following a bad canary. One Unit of Proof. |
