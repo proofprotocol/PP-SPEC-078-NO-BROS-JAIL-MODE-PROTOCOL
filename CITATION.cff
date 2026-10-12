@@ -5,7 +5,7 @@ version: 0.2.1
 date-released: 2026-10-11
 doi: 10.5281/zenodo.23285067
 type: standard
-license: CC-BY-4.0
+license-url: "https://github.com/proofprotocol/PP-SPEC-078-NO-BROS-JAIL-MODE-PROTOCOL/blob/main/LICENSE.md"
 keywords:
   - "No Bros Jail Mode Protocol"
   - "agent containment"
