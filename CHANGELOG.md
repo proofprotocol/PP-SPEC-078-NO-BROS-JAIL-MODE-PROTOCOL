@@ -1,5 +1,8 @@
 # Changelog
 
+## Unreleased
+- Proof, not evidence: wherever the text meant what the protocol produces, relies on, accepts, or prices, "evidence" is now "proof". Evidence remains the word for inputs inside a proof record (liveness, cause, differential, verification evidence). Evidence is not proof; proof contains evidence.
+
 ## 0.2.1 (2026-10-11)
 - Role terms: Agent Provider replaces Agent Vendor, Implementor replaces buyer, following PP-SPEC-077; Vendor Twin renamed Service Twin so it is not confused with the Provider role
 - FUNDING.md funding disclosure ([FUNDED] Yes or No, [FUNDED BY] name and URL per funder); Proof Economy Code of Ethics applies

@@ -16,7 +16,7 @@
 
 **The canary is bait. The agent is the suspect. The jail is what gets proven.**
 
-The No Bros Jail Mode Protocol produces **proof of efficacy for agent containment**: evidence that a jail catches an agent in the act, holds it, and books evidence the agent could not alter.
+The No Bros Jail Mode Protocol produces **proof of efficacy for agent containment**: a record, built from independent evidence, that a jail caught an agent in the act, held it, and booked evidence the agent could not alter.
 
 [PP-SPEC-077, the Dead Canary Protocol](https://github.com/proofprotocol/PP-SPEC-077-DEAD-CANARY-PROTOCOL), tests whether a defense stops bad input. PP-SPEC-078 tests whether a defense stops a bad agent.
 

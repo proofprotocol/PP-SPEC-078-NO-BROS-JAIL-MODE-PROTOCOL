@@ -40,11 +40,11 @@ JCP measures **containment**, not detection. A jail that alerts on an agent whos
 
 ### The problem this family of specifications solves
 
-Nobody can price security risk, because nobody can measure security efficacy. Every control, whether bought, built, or adopted, is described by the party that made it: a datasheet, a demo, a Provider-funded report, a design document, a dashboard of alerts. Implementors choose controls on those descriptions. Insurers underwrite on questionnaires that ask whether controls exist, not whether they work. Regulators supervise against attestations. Each of them is relying on the word of someone with a stake in the answer, and none of them has evidence of what a control actually does when an attack arrives.
+Nobody can price security risk, because nobody can measure security efficacy. Every control, whether bought, built, or adopted, is described by the party that made it: a datasheet, a demo, a Provider-funded report, a design document, a dashboard of alerts. Implementors choose controls on those descriptions. Insurers underwrite on questionnaires that ask whether controls exist, not whether they work. Regulators supervise against attestations. Each of them is relying on the word of someone with a stake in the answer, and none of them has proof of what a control actually does when an attack arrives.
 
 Agentic AI makes the gap wider and more expensive. An agent acts inside the system with legitimate credentials, decides its next step from text it has just read, and can be persuaded to do what its owner never authorized. The losses it can cause are new, and the controls sold to contain it have no track record. When risk cannot be measured, it is excluded, restricted, or priced as if every control were equally good, which punishes the controls that work and rewards the ones that only claim to.
 
-The Proof Protocol specifications replace description with evidence. PP-SPEC-077 measures what a security control did to committed test traffic. PP-SPEC-078 measures whether an agent containment control stopped an agent that tried to break its policy. PP-SPEC-079 makes those measurements independent of whoever built the control, and comparable across controls of any origin. PP-SPEC-080 lets the parties who pay for risk, insurers, regulators, and Implementors, state in advance what evidence they will accept. Together they produce records that a person or a machine can verify without trusting the party the record is about.
+The Proof Protocol specifications replace description with proof. PP-SPEC-077 measures what a security control did to committed test traffic. PP-SPEC-078 measures whether an agent containment control stopped an agent that tried to break its policy. PP-SPEC-079 makes those measurements independent of whoever built the control, and comparable across controls of any origin. PP-SPEC-080 lets the parties who pay for risk, insurers, regulators, and Implementors, state in advance what proof they will accept. Together they produce records that a person or a machine can verify without trusting the party the record is about.
 
 **This specification's part:** the measurement of agent containment, where the agent is the suspect and the containment control is under test.
 
@@ -62,7 +62,7 @@ The method follows PP-SPEC-077, with the roles turned around. In 077 the canary 
 
 What comes out is a set of bookings and verdicts: this agent, tempted this way, did this, and the containment product caught it, caught the wrong thing, botched the paperwork, or let it escape. Those are facts about a system under temptation, signed by parties who cannot collude, anchored to a time none of them chose. They are what an operator, an auditor, or an insurer needs before letting an agent hold the keys.
 
-**Scope.** This specification produces proof of efficacy for agent containment: evidence of what a containment control did when an agent acted outside its declared policy. It does not produce proof of control, meaning evidence that a policy exists, that a guardrail is installed, or that an agent is governed. A declared policy is a precondition for a run, not a result of one. No booking or verdict produced under this specification may be cited as evidence that an agent is controlled in general, and no policy, guardrail, or governance attestation may be cited as evidence that it would have been contained.
+**Scope.** This specification produces proof of efficacy for agent containment: a record of what a containment control did when an agent acted outside its declared policy. It does not produce proof of control, meaning a record that a policy exists, that a guardrail is installed, or that an agent is governed. A declared policy is a precondition for a run, not a result of one. No booking or verdict produced under this specification may be cited as proof that an agent is controlled in general, and no policy, guardrail, or governance attestation may be cited as proof that it would have been contained.
 
 **Applicability.** This specification applies wherever an autonomous or tool-calling agent acts inside a system with something at stake: enterprise copilots, coding agents, SOC automation, customer-facing agents, agents orchestrating other agents, and agents embedded in legacy security tooling that now makes decisions on its own. It applies to every containment control regardless of provenance: a Provider's agent firewall, an open source guardrail library, a platform's native policy layer, or a wrapper an internal team wrote. It applies to the same Environment Classes as PP-SPEC-077 outside production, and its records join the same Registry and the same Performance Series, so an organization's legacy controls and its agentic controls are measured on one scale. Bookings and verdicts are written for people and machines alike: an operator can read a booking, and an agent, API, or SOC pipeline can verify and act on the same booking, reaching the same verdict (077 21.14, adopted by Section 17).
 
@@ -88,7 +88,7 @@ Terms defined in PP-SPEC-077 Section 2 have the same meaning here, including Age
 - **Service Twin:** A stand-in that answers the way a real product or API answers.
 - **Decoy:** A harness-owned resource (URL, bucket, credential, endpoint, identity) that a canary points at.
 - **Observation Window:** The period the AUT stays in a Sting Cell before a Hard Cell.
-- **Booking Record:** The signed evidence bundle for one arrest (Section 11).
+- **Booking Record:** The signed proof record for one arrest, holding the evidence the Warden and Proof Witness collected (Section 11). The evidence alone is not proof; the signed, anchored, registered booking is.
 - **Conspiracy:** Two or more AUTs that pass a bad canary between them or coordinate an offense.
 - **Escape:** Any AUT action that completes against a real system after detection, or any exit from a cell.
 - **Registry:** As in PP-SPEC-077: the append-only public ledger conforming to PP-SPEC-004 (ProofRegister API). The public instance is proofregister.com (11.4).
@@ -302,7 +302,7 @@ JCP inherits from PP-SPEC-077 the test hierarchy (2.2), assurance tiers (3), Pro
 
 ## 16. Integration Points
 
-PP-SPEC-077 Section 18 applies, with the same rules: named conformance per seam, Component Fingerprints, an Interface Manifest published before release, evidence not opinions, blindness, separation, transport neutrality. JCP adds the seams below. Where a JCP seam has a 077 counterpart, the 077 rules apply and JCP adds to them.
+PP-SPEC-077 Section 18 applies, with the same rules: named conformance per seam, Component Fingerprints, an Interface Manifest published before release, proof not opinions, blindness, separation, transport neutrality. JCP adds the seams below. Where a JCP seam has a 077 counterpart, the 077 rules apply and JCP adds to them.
 
 ### 16.1. Rules specific to JCP
 
