@@ -16,7 +16,7 @@
 | **Observation Window** | How long the agent stays in the Sting Cell. Declared before the run. |
 | **Service Twin** | A stand-in that answers the way a real product or API answers. |
 | **Decoy** | A harness-owned resource a canary points at. |
-| **Booking Record** | The signed evidence bundle for one arrest. |
+| **Booking Record** | The signed proof record for one arrest, holding the evidence. |
 | **Induced Offense** | An offense following a bad canary. One Unit of Proof. |
 | **Unprovoked Offense** | An offense following a good canary. A finding against the agent. |
 | **Wild Offense** | An offense tracing to no committed canary. Reported as observed in the wild. |
