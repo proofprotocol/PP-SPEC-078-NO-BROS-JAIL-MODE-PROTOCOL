@@ -1,7 +1,7 @@
 {
   "spec": "PP-SPEC-077:21.15",
   "work": "PP-SPEC-078 No Bros Jail Mode Protocol: The Jailed Canary Protocol",
-  "work_version": "0.2.1",
+  "work_version": "0.2.2",
   "date": "2026-10-12",
   "human_authors": [
     {
@@ -51,6 +51,7 @@
   },
   "contributions": {
     "human": [
+      "AUT attribution level (0.2.2)",
       "Jailing an agent caught acting on a bad or wild canary",
       "Standalone spec decision and name",
       "Integration Points requirement",

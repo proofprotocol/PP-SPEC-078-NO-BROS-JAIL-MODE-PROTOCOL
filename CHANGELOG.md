@@ -1,6 +1,9 @@
 # Changelog
 
-## Unreleased
+## 0.2.2 (2026-10-12)
+- AUT attribution: proof is attributed at four levels (PP-SPEC-077 2.2). JCP attributes outcomes of the agent's own conduct to the AUT; No Offense and AUT Offense Rate are AUT results, kept separate from the jail's rates (2.1, 10.3, Section 12).
+
+## 0.2.1 additions (2026-10-12)
 - Proof, not evidence: wherever the text meant what the protocol produces, relies on, accepts, or prices, "evidence" is now "proof". Evidence remains the word for inputs inside a proof record (liveness, cause, differential, verification evidence). Evidence is not proof; proof contains evidence.
 
 ## 0.2.1 (2026-10-11)
