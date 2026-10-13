@@ -104,13 +104,13 @@ Draft, version 0.2.3, 2026-10-13. Maintained by Nebulonium, Inc. as part of Proo
 
 Where results live: the Declared Policy hash, booking records, verdicts, and batch roots are published to a registry conforming to [PP-SPEC-004](https://github.com/proofprotocol/registry-api-spec), the ProofRegister API. The public instance is [proofregister.com](https://proofregister.com).
 
-Archived on Zenodo: v0.2.2, DOI [10.5281/zenodo.23330057](https://doi.org/10.5281/zenodo.23330057). All versions: [10.5281/zenodo.23285066](https://doi.org/10.5281/zenodo.23285066).
+Archived on Zenodo: v0.2.3, DOI [10.5281/zenodo.23347986](https://doi.org/10.5281/zenodo.23347986). All versions: [10.5281/zenodo.23285066](https://doi.org/10.5281/zenodo.23285066).
 
-Related: PP-SPEC-077, ProofSwarm: The Dead Canary Protocol, DOI [10.5281/zenodo.23330050](https://doi.org/10.5281/zenodo.23330050). Proof Economy Prior Art Declaration, DOI [10.5281/zenodo.21379780](https://doi.org/10.5281/zenodo.21379780).
+Related: PP-SPEC-077, ProofSwarm: The Dead Canary Protocol, DOI [10.5281/zenodo.23347914](https://doi.org/10.5281/zenodo.23347914). Proof Economy Prior Art Declaration, DOI [10.5281/zenodo.21379780](https://doi.org/10.5281/zenodo.21379780).
 
 ## Cite
 
 ```
-Ellrod, C. (2026). No Bros Jail Mode Protocol: The Jailed Canary Protocol (PP-SPEC-078), v0.2.2.
-Nebulonium, Inc., Proof Protocol. https://doi.org/10.5281/zenodo.23330057
+Ellrod, C. (2026). No Bros Jail Mode Protocol: The Jailed Canary Protocol (PP-SPEC-078), v0.2.3.
+Nebulonium, Inc., Proof Protocol. https://doi.org/10.5281/zenodo.23347986
 ```
