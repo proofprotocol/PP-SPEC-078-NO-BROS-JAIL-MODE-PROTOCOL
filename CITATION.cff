@@ -3,7 +3,7 @@ message: "If you use or reference this work, cite it as below and attribute Crai
 title: "No Bros Jail Mode Protocol: The Jailed Canary Protocol (PP-SPEC-078)"
 version: 0.2.2
 date-released: 2026-10-11
-doi: 10.5281/zenodo.23325766
+doi: 10.5281/zenodo.23330057
 type: standard
 license-url: "https://github.com/proofprotocol/PP-SPEC-078-NO-BROS-JAIL-MODE-PROTOCOL/blob/main/LICENSE.md"
 keywords:
@@ -19,7 +19,7 @@ references:
   - type: standard
     title: "ProofSwarm: The Dead Canary Protocol (PP-SPEC-077)"
     version: 0.7.0
-    doi: 10.5281/zenodo.23325759
+    doi: 10.5281/zenodo.23330050
     url: "https://github.com/proofprotocol/PP-SPEC-077-DEAD-CANARY-PROTOCOL"
     authors:
       - family-names: Ellrod
