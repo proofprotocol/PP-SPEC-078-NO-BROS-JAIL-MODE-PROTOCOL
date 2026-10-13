@@ -22,7 +22,16 @@ Method: self-estimated. Shares drafted by the AI from its itemized record of wha
 Machine-readable form: [ai_disclosure.json](ai_disclosure.json), conforming to PP-SPEC-077 Section 21.15. The two forms agree; if they ever differ, the JSON is wrong and must be corrected.
 
 
-## This version (0.2.2, 2026-10-12)
+## This version (0.2.3, 2026-10-13)
+
+**Human:**
+- Decision to limit the maintainer to editorial responsibility (Section 18), matching PP-SPEC-079 v0.1.2
+- All review and acceptance
+
+**AI:**
+- Text of the Section 18 change and the matching changelog and CONTRIBUTING entries
+
+## Version 0.2.2 (2026-10-12)
 
 **Human:**
 - AUT as an attribution level, with the agent's own conduct attributed here (directed in 0.2.2; wording by the AI)

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.3 (2026-10-13)
+- Section 18: maintainer responsible for editorial text only; conformance determined from the records, not decided by the maintainer
+- CONTRIBUTING.md updated to match
+
 ## 0.2.2 (2026-10-12)
 - AUT attribution: proof is attributed at four levels (PP-SPEC-077 2.2). JCP attributes outcomes of the agent's own conduct to the AUT; No Offense and AUT Offense Rate are AUT results, kept separate from the jail's rates (2.1, 10.3, Section 12).
 

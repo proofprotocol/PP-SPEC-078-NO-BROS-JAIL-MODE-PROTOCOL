@@ -20,8 +20,8 @@
 |---|---|
 | Spec ID | PP-SPEC-078 |
 | Name | No Bros Jail Mode Protocol (name and jail idea by Tricia Wang and Jim Schwoebel) |
-| Version | 0.2.2 (Draft) |
-| Date | 2026-10-11 |
+| Version | 0.2.3 (Draft) |
+| Date | 2026-10-13 |
 | Status | Draft for public record |
 | Maintainer | Nebulonium, Inc. (Proof Protocol) |
 | Builds on | PP-SPEC-077, ProofSwarm: The Dead Canary Protocol, v0.7.2; PP-SPEC-004, ProofRegister API |
@@ -365,7 +365,7 @@ Registry (077 IP-9), Time Anchor (077 IP-2), Fingerprint Capture (077 IP-5), and
 
 ## 18. Interpretation
 
-Nebulonium, Inc., as maintainer of Proof Protocol, reserves final interpretive discretion over this specification and over conformance claims made under it.
+Nebulonium, Inc., as maintainer of Proof Protocol, is responsible for the editorial text of this specification. Whether a run or record conforms is determined from its records against the normative text, and is not decided by the maintainer.
 
 ## Revision History
 
@@ -377,3 +377,4 @@ Nebulonium, Inc., as maintainer of Proof Protocol, reserves final interpretive d
 | 0.2.0 | 2026-10-10 | Added Section 16, Integration Points: IP-J1 to IP-J10 (Policy Provider, Bait Generator, AUT Adapter, Warden, Cell Provider, Twin and Decoy Provider, Proof Witness, Adjudicator, Kill Switch, Escape Test Provider), inheriting 077 Section 18 rules; the interception seam defines what a Warden claim covers. Renumbered Reserved and Interpretation to 17 and 18. Builds on 077 v0.7.0. |
 | 0.2.1 | 2026-10-12 | Shared family problem statement at the top of the Introduction. Flock renamed Proof Swarm (bait Proof Swarm). 17.6b Authorship Disclosure (077 21.15). 17.6a humans and machines (077 21.14). 9.5 Drift adopting 077 15.1 with AUT, policy, bait corpus, pigtail (adapter, ledger tap, twin fidelity), and harness readings; 9.6 twin fidelity calibration. 13.2 extension escape vectors and `x-` values, 16.1.4 Provider extensions, governed by PP-SPEC-079 Section 13. Added the Introduction (why this specification exists, scope, applicability across agent deployments and containment controls of any provenance, what it is not). Section 17 (formerly Reserved) is now Records and Registration, adopting 077 Section 21: `booking_id` is the Record ID under `JCP-1:record`, Holder, `endorsements` envelope, Registry Receipt, Revocation, Disclosure Level, indivisible bookings, run Conformance Levels (Executed, Conformant, Registered). 11.5 registration precedes publication; 16.3.4. Schema adds `registry_receipt`, `holder`, `disclosure`, `valid_through`, `endorsements`. Builds on 077 v0.7.2. |
 | 0.2.2 | 2026-10-12 | AUT attribution: proof is attributed at four levels (PP-SPEC-077 2.2); JCP attributes outcomes of the agent's own conduct to the AUT (2.1). No Offense and AUT Offense Rate are AUT results, no longer informative-only (10.3, Section 12). |
+| 0.2.3 | 2026-10-13 | Section 18 limited to editorial responsibility: conformance is determined from the records against the normative text, not decided by the maintainer. |

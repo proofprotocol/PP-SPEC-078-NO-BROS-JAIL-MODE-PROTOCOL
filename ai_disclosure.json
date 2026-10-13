@@ -1,8 +1,8 @@
 {
   "spec": "PP-SPEC-077:21.15",
   "work": "PP-SPEC-078 No Bros Jail Mode Protocol: The Jailed Canary Protocol",
-  "work_version": "0.2.2",
-  "date": "2026-10-12",
+  "work_version": "0.2.3",
+  "date": "2026-10-13",
   "human_authors": [
     {
       "name": "Craig Thomas Ellrod",
@@ -56,13 +56,15 @@
       "Standalone spec decision and name",
       "Integration Points requirement",
       "Drift coverage including inputs and equipment",
-      "All review and acceptance"
+      "All review and acceptance",
+      "0.2.3: decision to limit the maintainer to editorial responsibility (Section 18), matching PP-SPEC-079 v0.1.2"
     ],
     "ai": [
       "Text as written",
       "Offense, grade, cell, verdict, and escape-suite design",
       "Records and Registration adoption",
-      "Twin fidelity calibration (9.6)"
+      "Twin fidelity calibration (9.6)",
+      "0.2.3: text of the Section 18 change and the matching changelog and CONTRIBUTING entries"
     ]
   },
   "pending_acceptance": [

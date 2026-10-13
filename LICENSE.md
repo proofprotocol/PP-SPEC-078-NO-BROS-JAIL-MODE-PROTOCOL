@@ -4,7 +4,7 @@ This repository is licensed under the **Greater Good Commercial License 1.0** (`
 
 ```
 License family: Greater Good License 1.0
-Covered Work: PP-SPEC-078, No Bros Jail Mode Protocol: The Jailed Canary Protocol, version 0.2.2
+Covered Work: PP-SPEC-078, No Bros Jail Mode Protocol: The Jailed Canary Protocol, version 0.2.3
 Offered under: GGL-C-1.0
 Original Inventor: Craig Thomas Ellrod, ORCID 0009-0004-1058-7666
 Inventor Record: DOI (pending)
