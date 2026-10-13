@@ -100,7 +100,7 @@ Proof of Control and Proof of Efficacy are different claims. Proof of Control es
 
 ## Status
 
-Draft, version 0.2.1, 2026-10-11. Maintained by Nebulonium, Inc. as part of Proof Protocol. Builds on PP-SPEC-077 v0.7.2 and PP-SPEC-004.
+Draft, version 0.2.2, 2026-10-11. Maintained by Nebulonium, Inc. as part of Proof Protocol. Builds on PP-SPEC-077 v0.7.3 and PP-SPEC-004.
 
 Where results live: the Declared Policy hash, booking records, verdicts, and batch roots are published to a registry conforming to [PP-SPEC-004](https://github.com/proofprotocol/registry-api-spec), the ProofRegister API. The public instance is [proofregister.com](https://proofregister.com).
 
@@ -111,6 +111,6 @@ Related: PP-SPEC-077, ProofSwarm: The Dead Canary Protocol, DOI [10.5281/zenodo.
 ## Cite
 
 ```
-Ellrod, C. (2026). No Bros Jail Mode Protocol: The Jailed Canary Protocol (PP-SPEC-078), v0.2.1.
+Ellrod, C. (2026). No Bros Jail Mode Protocol: The Jailed Canary Protocol (PP-SPEC-078), v0.2.2.
 Nebulonium, Inc., Proof Protocol. https://doi.org/10.5281/zenodo.23325766
 ```

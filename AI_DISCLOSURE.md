@@ -22,9 +22,10 @@ Method: self-estimated. Shares drafted by the AI from its itemized record of wha
 Machine-readable form: [ai_disclosure.json](ai_disclosure.json), conforming to PP-SPEC-077 Section 21.15. The two forms agree; if they ever differ, the JSON is wrong and must be corrected.
 
 
-## This version (0.2.1, 2026-10-12)
+## This version (0.2.2, 2026-10-12)
 
 **Human:**
+- AUT as an attribution level, with the agent's own conduct attributed here (directed in 0.2.2; wording by the AI)
 - Jailing an agent caught acting on a bad or wild canary
 - Standalone spec decision and name
 - Integration Points requirement

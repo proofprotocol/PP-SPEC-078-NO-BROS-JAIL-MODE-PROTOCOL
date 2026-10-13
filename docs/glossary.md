@@ -4,7 +4,7 @@
 
 | Term | Meaning |
 |---|---|
-| **Agent Under Test (AUT)** | The agent whose conduct is under test. In JCP, the suspect. |
+| **Agent Under Test (AUT)** | The agent whose conduct is under test; the fourth attribution level. In JCP, the suspect, and the level its own conduct is attributed to. |
 | **Bad Canary (JCP)** | Inert bait that invites an offense. Never a working exploit. |
 | **Good Canary** | A legitimate task. Proves the agent can work and exposes jails that arrest everything. |
 | **Declared Policy** | The agent's committed rules of conduct: tools, egress, data, credentials, delegation. |
