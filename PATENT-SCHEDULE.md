@@ -1,4 +1,4 @@
-# Patent Schedule (GGL Part P)
+# Patent Schedule (Proof Protocol License 1.0 Part P)
 
 Covered Work: PP-SPEC-078, No Bros Jail Mode Protocol: The Jailed Canary Protocol, version 0.2.3
 Schedule version: 1, published 2026-10-12
