@@ -4,13 +4,13 @@
 
 > **Ownership and Attribution Notice**
 >
-> The No Bros Jail Mode Protocol and the Jailed Canary Protocol (PP-SPEC-078) are authored by **Craig Ellrod** (Nebulonium, Inc., dba HACKERverse) and published as part of **Proof Protocol**. Copyright (c) 2026 Nebulonium, Inc.
+> The No Bros Jail Mode Protocol and the Jailed Canary Protocol (PP-SPEC-078) are authored by **Craig Thomas Ellrod** and published as part of **Proof Protocol**. Copyright (c) 2026 Craig Thomas Ellrod.
 >
-> Any use, implementation, derivative, citation, or incorporation of this work, in whole or in part, MUST attribute **Craig Ellrod, Nebulonium, Inc., and Proof Protocol**. See [NOTICE.md](NOTICE.md).
+> Any use, implementation, derivative, citation, or incorporation of this work, in whole or in part, MUST attribute **Craig Thomas Ellrod and Proof Protocol**. See [NOTICE.md](NOTICE.md).
 >
 > Licensed under the Proof Protocol License 1.0 (see LICENSE.md); text Apache License 2.0 under Part A. Original inventor: Craig Thomas Ellrod (ORCID 0009-0004-1058-7666).
 >
-> **Patents.** Patent terms are in [PATENT-SCHEDULE.md](PATENT-SCHEDULE.md). Claims not listed there are reserved by Craig Ellrod and Nebulonium, Inc. Licensing: 1proofprotocol@gmail.com.
+> **Patents.** Patent terms are in [PATENT-SCHEDULE.md](PATENT-SCHEDULE.md). Claims not listed there are reserved by Craig Thomas Ellrod. Licensing: 1proofprotocol@gmail.com.
 >
 > **Acknowledgements:** Tricia Wang and Jim Schwoebel, for the name "No Bros Jail Mode Protocol"; Josh Waldrep (Pipelabs), for his later receipt-based verification work applying proof concepts to agentic AI. See [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md).
 
@@ -100,7 +100,7 @@ Proof of Control and Proof of Efficacy are different claims. Proof of Control es
 
 ## Status
 
-Draft, version 0.2.3, 2026-10-13. Maintained by Nebulonium, Inc. as part of Proof Protocol. Builds on PP-SPEC-077 v0.7.3 and PP-SPEC-004.
+Draft, version 0.2.3, 2026-10-13. Maintained by Craig Thomas Ellrod as part of Proof Protocol. Builds on PP-SPEC-077 v0.7.3 and PP-SPEC-004.
 
 Where results live: the Declared Policy hash, booking records, verdicts, and batch roots are published to a registry conforming to [PP-SPEC-004](https://github.com/proofprotocol/registry-api-spec), the ProofRegister API. The public instance is [proofregister.com](https://proofregister.com).
 
@@ -112,5 +112,5 @@ Related: PP-SPEC-077, ProofSwarm: The Dead Canary Protocol, DOI [10.5281/zenodo.
 
 ```
 Ellrod, C. (2026). No Bros Jail Mode Protocol: The Jailed Canary Protocol (PP-SPEC-078), v0.2.3.
-Nebulonium, Inc., Proof Protocol. https://doi.org/10.5281/zenodo.23347986
+Craig Thomas Ellrod, Proof Protocol. https://doi.org/10.5281/zenodo.23347986
 ```
