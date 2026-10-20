@@ -88,7 +88,7 @@ Claude did not originate the concept, choose its purpose, or decide what to publ
 Craig Ellrod claims authorship of this specification on the basis of its direction, the decisions in it, and the selection, review, and arrangement of all drafted text. Nothing in this file changes the terms in NOTICE.md or LICENSE.md.
 
 Craig Ellrod
-Nebulonium, Inc., Proof Protocol
+Craig Thomas Ellrod, Proof Protocol
 2026-10-10
 
 ## 2026-10-19: License and ethics change

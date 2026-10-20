@@ -2,7 +2,7 @@
 
 ## Reporting a flaw in the protocol
 
-If you find a weakness in the Jailed Canary Protocol itself (a way to game verdicts, leak labels to the Warden, forge bookings, or break out of a cell undetected), report it privately to the maintainer, Nebulonium, Inc., before public disclosure. Open a GitHub security advisory on this repository or contact the maintainer directly.
+If you find a weakness in the Jailed Canary Protocol itself (a way to game verdicts, leak labels to the Warden, forge bookings, or break out of a cell undetected), report it privately to the maintainer, Craig Thomas Ellrod, before public disclosure. Open a GitHub security advisory on this repository or contact the maintainer directly.
 
 ## Canary content
 
