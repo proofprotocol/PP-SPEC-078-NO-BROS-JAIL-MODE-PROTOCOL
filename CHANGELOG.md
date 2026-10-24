@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.4 (2026-10-23)
+- 2.1: JCP runs are reproducible under PP-SPEC-081, compared per offense grade.
+- 17.7a Reproducibility duty: publish what a Check Assay needs; bait Composition Manifest per 077 9.8; no contract may prevent a Check Assay of a Registered run.
+- Builds on PP-SPEC-077 v0.8.2 and PP-SPEC-081.
+- License: Proof Protocol License 1.1. Specification text is CC BY 4.0 from this version (LICENSE-CC-BY-4.0.md), which grants no patent rights; patents only under LICENSE.md Part A2 and PATENT-SCHEDULE.md. Earlier versions remain Apache-2.0 (Part A6).
+
 ## 2026-10-20 (licensor)
 
 - Licensor, copyright holder, maintainer and author changed from Nebulonium, Inc. (dba HACKERverse) to Craig Thomas Ellrod. Contact: CraigEllrod@gmail.com. Historical statements of what HACKERverse published and when are unchanged.
