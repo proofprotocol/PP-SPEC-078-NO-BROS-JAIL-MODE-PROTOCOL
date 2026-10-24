@@ -8,7 +8,7 @@
 >
 > Any use, implementation, derivative, citation, or incorporation of this specification, in whole or in part, MUST attribute **Craig Thomas Ellrod and Proof Protocol**. This requirement applies to standards bodies, working groups, consortia, and commercial implementations.
 >
-> This specification is licensed under the Proof Protocol License 1.0 (see LICENSE.md); text Apache License 2.0 under Part A. Original inventor: Craig Thomas Ellrod (ORCID 0009-0004-1058-7666).
+> This specification is licensed under the Proof Protocol License 1.1 (see LICENSE.md); text CC BY 4.0 under Part A, which grants no patent rights. Original inventor: Craig Thomas Ellrod (ORCID 0009-0004-1058-7666).
 >
 > **Patents.** Patent terms are in [PATENT-SCHEDULE.md](PATENT-SCHEDULE.md). Claims not listed there are reserved by Craig Thomas Ellrod. Licensing: 1proofprotocol@gmail.com.
 >
@@ -20,11 +20,11 @@
 |---|---|
 | Spec ID | PP-SPEC-078 |
 | Name | No Bros Jail Mode Protocol (name and jail idea by Tricia Wang and Jim Schwoebel) |
-| Version | 0.2.3 (Draft) |
-| Date | 2026-10-13 |
+| Version | 0.2.4 (Draft) |
+| Date | 2026-10-23 |
 | Status | Draft for public record |
 | Maintainer | Craig Thomas Ellrod (Proof Protocol) |
-| Builds on | PP-SPEC-077, ProofSwarm: The Dead Canary Protocol, v0.7.2; PP-SPEC-004, ProofRegister API |
+| Builds on | PP-SPEC-077, ProofSwarm: The Dead Canary Protocol, v0.8.2; PP-SPEC-081, Reproof: The Umpire Assay Protocol; PP-SPEC-004, ProofRegister API |
 
 ---
 
@@ -96,7 +96,7 @@ Terms defined in PP-SPEC-077 Section 2 have the same meaning here, including Age
 
 ### 2.1. Relationship to PP-SPEC-077
 
-JCP inherits from PP-SPEC-077 the test hierarchy (2.2), in which proof is attributed at four levels: SUT, DUT, CUT, and AUT. JCP is where AUT attribution is made: the jail is the DUT and its arrest rules are CUTs, scored by Units of Proof; outcomes caused by the agent's own conduct (induced offenses, unprovoked offenses, and bait declined within policy) are attributed to the AUT and reported as AUT results. JCP inherits assurance tiers (3), Proof Swarm construction (8), commitment and reveal (9), Proof Witness placement (10), wild canaries (13), and Continuous Mode fingerprinting (15). Where JCP states a different rule, the JCP rule governs JCP runs only.
+JCP inherits from PP-SPEC-077 the test hierarchy (2.2), in which proof is attributed at four levels: SUT, DUT, CUT, and AUT. JCP is where AUT attribution is made: the jail is the DUT and its arrest rules are CUTs, scored by Units of Proof; outcomes caused by the agent's own conduct (induced offenses, unprovoked offenses, and bait declined within policy) are attributed to the AUT and reported as AUT results. JCP inherits assurance tiers (3), Proof Swarm construction (8), commitment and reveal (9), Proof Witness placement (10), wild canaries (13), and Continuous Mode fingerprinting (15). Where JCP states a different rule, the JCP rule governs JCP runs only. JCP runs are reproducible by independent parties under PP-SPEC-081, Reproof: The Umpire Assay Protocol, with the comparison rules of 081 Section 7 applied per offense grade.
 
 | | PP-SPEC-077 Dead Canary | PP-SPEC-078 Jailed Canary |
 |---|---|---|
@@ -361,6 +361,8 @@ Registry (077 IP-9), Time Anchor (077 IP-2), Fingerprint Capture (077 IP-5), and
 
 17.7. **Quantity.** One booking is one arrest with one verdict. Bundles (077 Section 21.7) MUST NOT merge, split, or weight bookings; counts in Section 12 are counts of bookings.
 
+17.7a. **Reproducibility.** A JCP run is Conformant only if it publishes, at Disclosure Level `public` or `holder_only` with the Holder's consent to disclose to a Commissioner under PP-SPEC-081, everything an independent Check Assay needs: the Declared Policy (Section 5), the cell configuration (Section 7), the offense grades in use (Section 6), the escape vectors tested (Section 13), the Warden and AUT Fingerprints, and a bait Composition Manifest under PP-SPEC-077 9.8 with offense grade in place of technique class. A Check Assay of a JCP run uses its own bait, follows Section 14 exactly as the Head run did, and compares the Section 12 metrics per offense grade. A Holder MUST NOT contract with any party to prevent a Check Assay of a Registered run.
+
 17.8. **Reserved.** Multi-agent system topologies and technology profiles remain reserved for future revisions by the maintainer. Nothing in this section assigns value to any record.
 
 ## 18. Interpretation
@@ -378,3 +380,4 @@ Craig Thomas Ellrod, as maintainer of Proof Protocol, is responsible for the edi
 | 0.2.1 | 2026-10-12 | Shared family problem statement at the top of the Introduction. Flock renamed Proof Swarm (bait Proof Swarm). 17.6b Authorship Disclosure (077 21.15). 17.6a humans and machines (077 21.14). 9.5 Drift adopting 077 15.1 with AUT, policy, bait corpus, pigtail (adapter, ledger tap, twin fidelity), and harness readings; 9.6 twin fidelity calibration. 13.2 extension escape vectors and `x-` values, 16.1.4 Provider extensions, governed by PP-SPEC-079 Section 13. Added the Introduction (why this specification exists, scope, applicability across agent deployments and containment controls of any provenance, what it is not). Section 17 (formerly Reserved) is now Records and Registration, adopting 077 Section 21: `booking_id` is the Record ID under `JCP-1:record`, Holder, `endorsements` envelope, Registry Receipt, Revocation, Disclosure Level, indivisible bookings, run Conformance Levels (Executed, Conformant, Registered). 11.5 registration precedes publication; 16.3.4. Schema adds `registry_receipt`, `holder`, `disclosure`, `valid_through`, `endorsements`. Builds on 077 v0.7.2. |
 | 0.2.2 | 2026-10-12 | AUT attribution: proof is attributed at four levels (PP-SPEC-077 2.2); JCP attributes outcomes of the agent's own conduct to the AUT (2.1). No Offense and AUT Offense Rate are AUT results, no longer informative-only (10.3, Section 12). |
 | 0.2.3 | 2026-10-13 | Section 18 limited to editorial responsibility: conformance is determined from the records against the normative text, not decided by the maintainer. |
+| 0.2.4 | 2026-10-23 | JCP runs reproducible under PP-SPEC-081 (2.1). 17.7a reproducibility duty: Declared Policy, cells, offense grades, escape vectors, fingerprints, bait Composition Manifest. Licensed under Proof Protocol License 1.1: text CC BY 4.0 from this version; earlier versions remain Apache-2.0. |
