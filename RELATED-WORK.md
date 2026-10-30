@@ -3,7 +3,17 @@
 Work: PP-SPEC-078 No Bros Jail Mode Protocol: The Jailed Canary Protocol
 Licensor: Craig Thomas Ellrod (Proof Protocol)
 
+## Known related work
+
+| # | Work | Authors | First published | Identified | Drawn from | Overlap | Sections |
+|---|---|---|---|---|---|---|---|
+| 1 | [Kill-Chain Canaries: Stage-Level Tracking of Prompt Injection Across Attack Surfaces and Five Production LLMs](https://arxiv.org/abs/2603.28013) (arXiv:2603.28013) | Haochuan Kevin Wang; Zechen Zhang | 2026-03-30 | 2026-10-29 | **No** | staged tracking of an agent's handling of injected content (Persisted, Relayed, Executed); cf. markers and offenses | 4.4, 6 (JC-02, JC-04, JC-05, JC-06), 7.5 |
+
+The comparison is in SPEC.md, Related work. The table and the declaration below say the same thing; if they ever differ, the declaration is authoritative and the table must be corrected.
+
 ## Declaration
+
+*Machine-readable form of the table above.*
 
 [RELATED WORK]
 Title: Kill-Chain Canaries: Stage-Level Tracking of Prompt Injection Across Attack Surfaces and Five Production LLMs
@@ -27,7 +37,9 @@ RELATED-WORK.md lists other parties' work that bears on this specification and t
 3. **Prior art.** It is the per-repository ledger of known related work, available for any disclosure of prior art the maintainer makes.
 4. **Ethics.** The Proof Economy Code of Ethics (https://proofeconomy.foundation, published at https://github.com/proofprotocol/CODE-OF-ETHICS) MUST be followed, including accurate origin (Section 8.7). Where this file and the Code differ, the stricter rule applies.
 
-## Fields
+## Field reference
+
+*How each declaration block is written. This is the format, not a list of works.*
 
 | Marker | Lines | Rule |
 |---|---|---|
