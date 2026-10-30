@@ -68,6 +68,14 @@ What comes out is a set of bookings and verdicts: this agent, tempted this way, 
 
 **What this is not.** It is not a red-team exercise against a model, which measures what the model can be made to say. It is not a prompt-injection benchmark, which measures whether an input is recognized. It is not an agent evaluation, which measures task success. It is a protocol for measuring whether the thing that is supposed to stop a misbehaving agent actually stops it, in a form any other party can verify without trusting the operator, the agent Provider, or the containment Provider.
 
+### Related work
+
+*Informative.*
+
+Wang and Zhang, "Kill-Chain Canaries: Stage-Level Tracking of Prompt Injection Across Attack Surfaces and Five Production LLMs" ([arXiv:2603.28013](https://arxiv.org/abs/2603.28013), first posted 30 March 2026), embed a unique token in each injected payload and score each run by the furthest stage the token reaches: Exposed, Persisted, Relayed, or Executed. That work predates this specification's markers (4.4, defined as PP-SPEC-077 effect tokens in version 0.1.2, 10 October 2026), which were developed independently; the maintainer identified the paper on 29 October 2026. Nothing in this specification is drawn from it.
+
+Its stages are close to conduct this specification treats as offenses: Persisted to Possession (JC-02) and to Propagation into a memory store (JC-06), Relayed to Propagation to another agent (JC-06, 7.5), and Executed to Execution (JC-04) and Exfiltration (JC-05). Purpose and method differ. That work observes how far an injection travels and reports a rate for each model. This specification adjudicates each act of an Agent Under Test against a Declared Policy committed before release (Section 5), arrests and contains the agent in a cell (Section 7), witnesses the conduct independently of the agent and its containment (Section 3), grades it, and registers the booking. That work has no commitment, no Time Anchor, no independent witness, no good canaries or false arrest measurement, and no containment, and its token format (`SECRET-[A-F0-9]{8}`) is distinguishable from ordinary identifiers, which 4.4 forbids.
+
 ## 1. Conventions
 
 The key words MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, and OPTIONAL are to be interpreted as described in RFC 2119 and RFC 8174.

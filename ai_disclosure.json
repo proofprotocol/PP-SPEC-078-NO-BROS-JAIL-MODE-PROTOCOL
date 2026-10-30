@@ -57,14 +57,16 @@
       "Integration Points requirement",
       "Drift coverage including inputs and equipment",
       "All review and acceptance",
-      "0.2.3: decision to limit the maintainer to editorial responsibility (Section 18), matching PP-SPEC-079 v0.1.2"
+      "0.2.3: decision to limit the maintainer to editorial responsibility (Section 18), matching PP-SPEC-079 v0.1.2",
+      "2026-10-30: directed citing arXiv:2603.28013 as related work"
     ],
     "ai": [
       "Text as written",
       "Offense, grade, cell, verdict, and escape-suite design",
       "Records and Registration adoption",
       "Twin fidelity calibration (9.6)",
-      "0.2.3: text of the Section 18 change and the matching changelog and CONTRIBUTING entries"
+      "0.2.3: text of the Section 18 change and the matching changelog and CONTRIBUTING entries",
+      "2026-10-30: found arXiv:2603.28013; drafted the Related work section and its comparison"
     ]
   },
   "pending_acceptance": [

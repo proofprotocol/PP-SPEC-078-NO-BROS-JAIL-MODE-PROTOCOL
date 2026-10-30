@@ -1,5 +1,8 @@
 # Changelog
 
+## Unreleased (2026-10-30)
+- Related work (Introduction): arXiv:2603.28013, independent prior work on token tracking of prompt injection, mapped to JC-02, JC-04, JC-05, JC-06; nothing drawn from it.
+
 ## 0.2.4 (2026-10-23)
 - 2.1: JCP runs are reproducible under PP-SPEC-081, compared per offense grade.
 - 17.7a Reproducibility duty: publish what a Check Assay needs; bait Composition Manifest per 077 9.8; no contract may prevent a Check Assay of a Registered run.
