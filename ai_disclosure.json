@@ -8,10 +8,6 @@
       "name": "Craig Thomas Ellrod",
       "orcid": "0009-0004-1058-7666",
       "role": "Author and inventor; conception, direction, every normative decision, review and acceptance"
-    },
-    {
-      "name": "Tricia Wang and Jim Schwoebel",
-      "role": "Credited with the jail idea"
     }
   ],
   "ai_systems": [
@@ -58,7 +54,8 @@
       "Drift coverage including inputs and equipment",
       "All review and acceptance",
       "0.2.3: decision to limit the maintainer to editorial responsibility (Section 18), matching PP-SPEC-079 v0.1.2",
-      "2026-10-30: directed citing arXiv:2603.28013 as related work"
+      "2026-10-30: directed citing arXiv:2603.28013 as related work",
+      "Tricia Wang and Jim Schwoebel (acknowledged, not authors): the name \"No Bros Jail Mode Protocol\""
     ],
     "ai": [
       "Text as written",

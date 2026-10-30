@@ -6,7 +6,7 @@ This file states what in PP-SPEC-078 came from a human and what came from an AI 
 
 ## Summary
 
-The direction is Craig Ellrod's. The name and the jail idea are credited to Tricia Wang and Jim Schwoebel. The words and most design details were drafted with Claude and accepted by Craig Ellrod.
+The direction is Craig Ellrod's. The name is credited to Tricia Wang and Jim Schwoebel. The words and most design details were drafted with Claude and accepted by Craig Ellrod.
 
 ## Ratio
 
@@ -26,8 +26,12 @@ Machine-readable form: [ai_disclosure.json](ai_disclosure.json), conforming to P
 
 **Human (Craig Ellrod):**
 - Direction to cite arXiv:2603.28013 as related work, and the question of where its attribution belongs
+- Direction to add RELATED-WORK.md
+- Statement that Tricia Wang and Jim Schwoebel contributed the name only, and direction to correct the record
 - Review and acceptance (pending)
 
+- RELATED-WORK.md: its fields and rules
+- Found the inconsistent credit across SPEC.md, AI_DISCLOSURE.md, ai_disclosure.json, ACKNOWLEDGEMENTS.md, NOTICE.md and README.md, and the text of the correction
 **AI (Claude Opus 5.5):**
 - Found the paper on 2026-10-29 while checking the claim that no one else attributes agent actions to planted tokens
 - The comparison and the text of the Related work section, the CITATION.cff reference, and the ACKNOWLEDGEMENTS.md note
@@ -88,7 +92,7 @@ AI systems: Anthropic Claude (Fable 5.1, Opus 5.5); OpenAI ChatGPT (banner image
 - The Proof Witness, canaries, Proof Swarm, commitment, Time Anchor, Unit of Proof, and assurance tiers, all inherited from PP-SPEC-077, which he authored.
 - The ownership position: sole authorship, a prior license (since superseded by the Proof Protocol License 1.0), patent rights reserved, mandatory attribution, and the acknowledgment of Tricia Wang and Jim Schwoebel.
 
-**Tricia Wang and Jim Schwoebel:** the name "No Bros Jail Mode Protocol" and the jail idea.
+**Tricia Wang and Jim Schwoebel:** the name "No Bros Jail Mode Protocol". They are acknowledged, not authors.
 
 ## AI: Claude (Anthropic)
 

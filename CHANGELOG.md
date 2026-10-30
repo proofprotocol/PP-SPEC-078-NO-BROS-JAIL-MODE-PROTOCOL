@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased (2026-10-30)
+- RELATED-WORK.md: machine-readable list of known related work by others, with dates and whether anything was drawn from it; referenced from SPEC.md, README.md and ACKNOWLEDGEMENTS.md.
+- Correction: Tricia Wang and Jim Schwoebel are credited with the name "No Bros Jail Mode Protocol", as ACKNOWLEDGEMENTS.md, NOTICE.md and README.md already stated. SPEC.md (header and Name row) and AI_DISCLOSURE.md had also credited them with "the jail idea"; the author states that their contribution was the name only. They are removed from `human_authors` in ai_disclosure.json, because an acknowledgement is not authorship, and are listed under human contributions instead.
 - Related work (Introduction): arXiv:2603.28013, independent prior work on token tracking of prompt injection, mapped to JC-02, JC-04, JC-05, JC-06; nothing drawn from it.
 
 ## 0.2.4 (2026-10-23)

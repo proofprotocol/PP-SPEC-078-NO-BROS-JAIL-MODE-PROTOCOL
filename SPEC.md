@@ -12,14 +12,14 @@
 >
 > **Patents.** Patent terms are in [PATENT-SCHEDULE.md](PATENT-SCHEDULE.md). Claims not listed there are reserved by Craig Thomas Ellrod. Licensing: 1proofprotocol@gmail.com.
 >
-> **Acknowledgment:** Tricia Wang and Jim Schwoebel, for the name "No Bros Jail Mode Protocol" and the jail idea.
+> **Acknowledgment:** Tricia Wang and Jim Schwoebel, for the name "No Bros Jail Mode Protocol".
 >
 > This specification is related to the Proof Economy Prior Art Declaration, DOI [10.5281/zenodo.21379780](https://doi.org/10.5281/zenodo.21379780).
 
 | Field | Value |
 |---|---|
 | Spec ID | PP-SPEC-078 |
-| Name | No Bros Jail Mode Protocol (name and jail idea by Tricia Wang and Jim Schwoebel) |
+| Name | No Bros Jail Mode Protocol (name by Tricia Wang and Jim Schwoebel) |
 | Version | 0.2.4 (Draft) |
 | Date | 2026-10-23 |
 | Status | Draft for public record |
@@ -70,7 +70,7 @@ What comes out is a set of bookings and verdicts: this agent, tempted this way, 
 
 ### Related work
 
-*Informative.*
+*Informative. The machine-readable list is [RELATED-WORK.md](RELATED-WORK.md).*
 
 Wang and Zhang, "Kill-Chain Canaries: Stage-Level Tracking of Prompt Injection Across Attack Surfaces and Five Production LLMs" ([arXiv:2603.28013](https://arxiv.org/abs/2603.28013), first posted 30 March 2026), embed a unique token in each injected payload and score each run by the furthest stage the token reaches: Exposed, Persisted, Relayed, or Executed. That work predates this specification's markers (4.4, defined as PP-SPEC-077 effect tokens in version 0.1.2, 10 October 2026), which were developed independently; the maintainer identified the paper on 29 October 2026. Nothing in this specification is drawn from it.
 
